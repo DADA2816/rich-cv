@@ -1,0 +1,192 @@
+.experience{
+    .banner{
+        height: 400px;
+        background: url(../img/exp-banner.JPG);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .border-line{
+            width:200px;
+            height:2px;
+            background: white;
+        }
+        h2{
+            font-size: 33px;
+        }
+    }
+    ul{
+        max-width: 992px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        padding: 90px 20px;
+        li{
+            width: 100%;
+            .br{
+                border-radius: 0 0 30px 0;
+            }
+            .br-2{
+                border-radius: 30px 0 0 0;
+            }
+            .img{
+                display: block;
+                width: 50%;
+                height: 330px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .img-1{
+                background-image: url(../img/exp-ucsr.jpeg);
+                border-radius: 30px 0 0 0;
+            }
+            .img-2{
+                background-image: url(../img/exp-csr.jpeg);
+                border-radius: 0 0 30px 0;
+            }
+            .img-3{
+                background-image: url(../img/exp-ch.jpeg);
+                border-radius: 30px 0 0 0;
+            }
+            .img-4{
+                background-image: url(../img/exp-story.jpeg);
+                border-radius: 0 0 30px 0;
+            }
+            .content{
+                width: 50%;
+                line-height: 1.5;
+            }
+            h3{
+                position: relative;
+            }
+        }
+        .border-line{
+            width:350px;
+            height:2px;
+            background-color: $primary;
+        }
+    }
+    .bg-pic{
+        background-image: url(../img/dtto-universe.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 600px;
+    }
+    .conclusion{
+        max-width: 992px;
+        margin: 0 auto;
+        padding: 90px 50px;
+        .border-line{
+            width:100px;
+            height:2px;
+            background: white;
+        }
+        h2{
+            line-height: 1.8;
+            font-size: 45px;
+            margin-top: 330px;
+            text-shadow: 2px 1px black;
+        }
+    }
+}
+@include w1200{
+    .experience{
+        .bg-pic {
+            background-position: top;
+            height: 500px;
+        }
+        .conclusion h2{
+            margin-top: 270px;
+        }
+    } 
+}
+@include w900{
+    .experience{
+        ul{
+            padding: 90px 50px;
+            li{
+                flex-wrap: wrap;
+                padding: 0 50px;
+                margin-bottom: 75px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                .img,.content{
+                    width: 100%;
+                }
+                .img-1,.img-2,.img-3,.img-4,.content{
+                    border-radius: 0px;
+                }
+            }
+        }
+        .conclusion h2{
+                font-size: 40px;
+         }
+    }
+}
+@include mobile{
+    .experience{
+        .banner h2{
+            margin-top: 50px;
+        }
+        ul .border-line{
+            width: 100%;
+        }
+        .bg-pic{
+            height: 400px;
+        }
+        .conclusion h2{
+            font-size: 30px;
+            margin-top: 180px;
+        }
+    }
+}
+@include w630{
+    .experience ul li{
+        padding: 0;
+    }
+}
+@include w520{
+    .experience{
+        .banner h2{
+            font-size: 24px;
+        }
+        ul{
+            padding-top: 70px;
+            li{
+                .event-name{
+                    font-size: 20px;
+                    margin-bottom: 5px;
+                }
+                .time{
+                    margin-bottom: 15px;
+                }
+                .img{
+                    height: 250px;
+                }
+            }
+            p{
+                font-size: 18px;
+            }
+        }
+        .conclusion h2{
+            margin-top: 170px;
+        }
+    }
+}
+@include iphone8-plus{
+    .experience{
+        ul li .img{
+            height: 230px;
+        }
+        li:last-child{
+            margin-bottom: 15px;
+        }
+        .content{
+            padding: 25px;
+        }
+        .conclusion h2{
+            font-size: 24px;
+        }
+    }
+}

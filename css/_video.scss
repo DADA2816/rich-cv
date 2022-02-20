@@ -1,0 +1,115 @@
+.video{
+    max-width: 992px;
+    margin: 0 auto;
+    padding: 90px 50px;
+    .title{
+        h2{
+            font-size: 33px;
+        }
+        .border-line{
+            width:200px;
+            height:2px;
+            background: $font-dark;
+        }
+    }
+    .mov-title{
+        transition: all 0.3s;
+        &:hover,&:active{
+            color: $font-light;
+        }
+    }
+    .mov-title:before{
+        display: inline-block;
+        position: relative;
+        top:-7px;
+        right: 20px;
+        content: "";
+        width: 200px;
+        height: 0px;
+        border: 1px solid $font-dark;
+    }
+    .mov-title:after{
+        display: inline-block;
+        position: relative;
+        top:-7px;
+        left: 20px;
+        content: "";
+        width: 200px;
+        color: #fff;
+        height: 0px;
+        border: 1px solid $font-dark;
+    }    
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+    }
+    .video-container iframe, .video-container object, .video-container embed {
+        position: absolute;
+        top: 0;left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .bob{
+        position: absolute;
+        width: 150px;
+        height: 210px;
+        left: 100px;
+        top: 2590px;
+    }
+}
+@include mobile{
+    .video{
+        .mov-title:before,.mov-title:after{
+            width: 100px;
+        }
+        .title{
+            margin-top: 50px;
+        }
+    }
+}
+@include pad{
+    .video{
+        .bob{
+            display: none;
+        }
+    }
+}
+@include w630{
+    .video{
+        .mov-title:before,.mov-title:after{
+            width: 80px;
+        }
+        .yt{
+            a{
+                font-size: 24px;
+            }
+            h2{
+                font-size: 20px;
+            }
+        }
+    }
+}
+@include w520{
+    .video{
+        .mov-title:before,.mov-title:after{
+            display: none;
+        }
+        .title h2{
+            font-size: 30px;
+        }
+        .yt{
+            .video-container{
+                margin-bottom: 75px;
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+            }
+            h2{
+                font-size: 18px;
+            }
+        }
+    }
+}

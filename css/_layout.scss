@@ -1,0 +1,122 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif,'Noto Serif','Noto Serif TC';
+    background-color: white;
+    img{
+        display: block;
+        width: 100%;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+
+//header
+.header{
+    background-color: white;
+    .container{
+        max-width: 992px;
+        margin: 0 auto;
+        .menu{
+            transition: all 0.3s;
+            &:hover,&:active{
+                color: $font-light;
+            }
+        }
+    }
+}
+
+.mobileNavbar, .mobileNavbarIcon{
+    display: none;
+}
+
+// header media query
+@include mobile{
+    .container{
+        padding-left: 0px;
+    }
+    .header{
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+    }
+    .pcNavbar{
+        display: none;
+    }
+    .mobileNavbar{
+        display: block;
+        position: absolute;
+        top: 70px;
+        right: 0px;
+        left: 0px;
+        max-height: 0px;
+        overflow: hidden;
+        text-align: center;
+        transition: max-height 1s;
+        li{
+            background-color: $third;
+        }
+        a{
+            &:hover,&:active{
+                color: white;
+                background-color: $font-dark;
+            }
+        }
+    }
+    .mobileNavbarIcon {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .show .mobileNavbar{
+        max-height: 500px;
+    }
+}
+
+// main
+.backToTop{             //置頂
+    width: 55px;
+    height: 55px;
+    position: fixed;
+    right: 60px;
+    bottom: 60px;
+    transition: all 0.3s;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+@include mobile{ 
+    .backToTop{         
+        width: 45px;
+        height: 45px;
+        right: 30px;
+    }
+}
+
+// footer
+.bg-footer{
+    background-color: $primary;
+}
+.footer{
+    max-width: 992px;
+    a{
+        transition: all 0.3s;
+        &:hover,&:active{
+            color: $font-light;
+            transform: scale(1.05);
+        }
+    }
+}
+@include w520{
+    .footer{
+        font-size: 18px;
+    }
+}
+@include iphone8-plus{
+    .footer{
+        font-size: 16px;
+    }
+}
