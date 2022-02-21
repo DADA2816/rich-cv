@@ -1,6 +1,6 @@
 .script{
     .banner{
-        height: 400px;
+        height: 500px;
         background: url(../img/script-banner.jpeg);
         background-position: center;
         background-repeat: no-repeat;
@@ -33,30 +33,6 @@
             width: 70%;
             border-radius: 30px 0 30px 0;
         }
-        .dinu{
-            width: 80px;
-            height: 100px;
-        }
-        .saugy{
-            width: 70px;
-            height: 80px;
-        }
-        .zolly{
-            width: 80px;
-            height: 110px;
-        }
-        .lynn{
-            width: 70px;
-            height: 110px;
-        }
-        .hoya{
-            width: 80px;
-            height: 100px;
-        }
-    }
-    li p{
-        animation: fadeIn;
-        animation-duration: 1.5s;
     }
 }
 .logline{
@@ -162,8 +138,11 @@
 }
 @include w520{
     .script{
-        .banner h2{
-            font-size: 24px;
+        .banner{
+            height: 350px;
+            h2{
+                font-size: 24px;
+            }
         }
         .main p{
             font-size: 18px;

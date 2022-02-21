@@ -435,6 +435,10 @@ table {
   color: #71BBD9;
 }
 
+.font-lighter {
+  color: #a5dcf1;
+}
+
 .bg-primary {
   background-color: #005C98;
 }
@@ -453,6 +457,10 @@ table {
 
 .bg-black {
   background-color: #000;
+}
+
+.bg-font-dark {
+  background-color: #073A59;
 }
 
 *, *::before, *::after {
@@ -477,6 +485,9 @@ body a {
 
 .header {
   background-color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
 
 .header .container {
@@ -500,11 +511,6 @@ body a {
 @media (max-width: 767px) {
   .container {
     padding-left: 0px;
-  }
-  .header {
-    position: fixed;
-    width: 100%;
-    z-index: 10;
   }
   .pcNavbar {
     display: none;
@@ -568,7 +574,7 @@ body a {
 }
 
 .bg-footer {
-  background-color: #005C98;
+  background-color: #073A59;
 }
 
 .footer {
@@ -598,6 +604,10 @@ body a {
   }
 }
 
+.index .self-intro {
+  padding: 120px 0px;
+}
+
 .index .self-intro .pc-img {
   width: 30%;
   position: relative;
@@ -608,7 +618,7 @@ body a {
   height: 400px;
   border: 5px solid #F5F5F5;
   position: absolute;
-  top: 250px;
+  top: 130px;
   left: 300px;
   z-index: 2;
 }
@@ -618,7 +628,7 @@ body a {
   height: 350px;
   border: 5px solid #F5F5F5;
   position: absolute;
-  top: 380px;
+  top: 260px;
   left: 100px;
   z-index: 3;
 }
@@ -627,7 +637,7 @@ body a {
   width: 400px;
   height: 300px;
   position: absolute;
-  top: 110px;
+  top: 10px;
   z-index: 1;
 }
 
@@ -637,11 +647,11 @@ body a {
 }
 
 .index .self-intro .content .title {
-  padding: 90px 0px 0px 50px;
+  padding-left: 50px;
 }
 
 .index .self-intro .content > ul {
-  padding: 0px 50px 90px;
+  padding: 0px 50px;
 }
 
 .index .self-intro .content .border-line {
@@ -671,7 +681,7 @@ body a {
   .index .self-intro .pc-img .img-2 {
     width: 230px;
     height: 330px;
-    top: 350px;
+    top: 250px;
     left: 100px;
   }
   .index .self-intro .pc-img .img-3 {
@@ -689,7 +699,7 @@ body a {
   .index .self-intro .pc-img .img-2 {
     width: 200px;
     height: 300px;
-    top: 300px;
+    top: 200px;
     left: 50px;
   }
   .index .self-intro .pc-img .img-3 {
@@ -700,6 +710,7 @@ body a {
 
 @media (max-width: 900px) {
   .index .self-intro {
+    padding: 70px 0;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -717,7 +728,7 @@ body a {
   .index .self-intro .content {
     width: 80%;
     margin: 0 auto;
-    padding: 50px 50px 90px;
+    padding: 50px 0px 90px;
   }
   .index .self-intro .content > ul {
     padding: 0px;
@@ -729,6 +740,7 @@ body a {
 
 @media (max-width: 630px) {
   .index .self-intro {
+    padding: 70px 0 20px;
     width: 100%;
   }
   .index .self-intro .mobile-img {
@@ -748,12 +760,12 @@ body a {
     padding: 50px 50px 0;
   }
   .index .self-intro .content {
-    padding: 50px;
+    padding: 50px 10px;
   }
 }
 
 .script .banner {
-  height: 400px;
+  height: 500px;
   background: url(../img/script-banner.jpeg);
   background-position: center;
   background-repeat: no-repeat;
@@ -790,38 +802,6 @@ body a {
   line-height: 1.8;
   width: 70%;
   border-radius: 30px 0 30px 0;
-}
-
-.script .praise .dinu {
-  width: 80px;
-  height: 100px;
-}
-
-.script .praise .saugy {
-  width: 70px;
-  height: 80px;
-}
-
-.script .praise .zolly {
-  width: 80px;
-  height: 110px;
-}
-
-.script .praise .lynn {
-  width: 70px;
-  height: 110px;
-}
-
-.script .praise .hoya {
-  width: 80px;
-  height: 100px;
-}
-
-.script li p {
-  -webkit-animation: fadeIn;
-          animation: fadeIn;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
 }
 
 .logline {
@@ -932,6 +912,9 @@ body a {
 }
 
 @media (max-width: 520px) {
+  .script .banner {
+    height: 350px;
+  }
   .script .banner h2 {
     font-size: 24px;
   }
@@ -977,7 +960,7 @@ body a {
 }
 
 .video .mov-title:hover, .video .mov-title:active {
-  color: #71BBD9;
+  color: #a5dcf1;
 }
 
 .video .mov-title:before {
@@ -988,7 +971,7 @@ body a {
   content: "";
   width: 200px;
   height: 0px;
-  border: 1px solid #073A59;
+  border: 1px solid #71BBD9;
 }
 
 .video .mov-title:after {
@@ -1000,7 +983,7 @@ body a {
   width: 200px;
   color: #fff;
   height: 0px;
-  border: 1px solid #073A59;
+  border: 1px solid #71BBD9;
 }
 
 .video .video-container {
@@ -1073,8 +1056,8 @@ body a {
 }
 
 .experience .banner {
-  height: 400px;
-  background: url(../img/exp-banner.JPG);
+  height: 500px;
+  background: url(https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1238,6 +1221,9 @@ body a {
 }
 
 @media (max-width: 520px) {
+  .experience .banner {
+    height: 350px;
+  }
   .experience .banner h2 {
     font-size: 24px;
   }

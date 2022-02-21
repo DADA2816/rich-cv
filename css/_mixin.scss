@@ -3,6 +3,7 @@ $second:#1C1C1C;
 $third: #F5F5F5;
 $font-dark: #073A59;
 $font-light: #71BBD9;
+$font-lighter: #a5dcf1;
 // margin
 .m0-a{
     margin: 0 auto;
@@ -291,6 +292,9 @@ $font-light: #71BBD9;
 .font-light{
     color: $font-light;
 }
+.font-lighter{
+    color: $font-lighter;
+}
 
 // background-color
 .bg-primary{
@@ -307,6 +311,9 @@ $font-light: #71BBD9;
 }
 .bg-black{
     background-color: #000;
+}
+.bg-font-dark{
+    background-color: $font-dark;
 }
 
 // hide-text
